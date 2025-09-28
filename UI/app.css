@@ -1,55 +1,172 @@
-.card-wrapper {
-    margin: 5% 0;
-  }
-  
-/* You can adjust the image size by increasing/decreasing the width, height */
-.custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive */
-  height: 10vw;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f6f8fa;
+  min-height: 100vh;
+  position: relative;
 }
 
-.custom-circle-image img {
-  object-fit: cover;
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background: linear-gradient(120deg, #2563eb 0%, #60a5fa 100%);
+  opacity: 0.18;
 }
 
-.card-title {
-  letter-spacing: 1.1px;
+.main-card {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  margin: 48px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1), 0 1.5px 8px rgba(0, 0, 0, 0.07);
+  padding: 36px 28px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card-text {
-  font-family: MerriweatherRegular;
-  font-size: 22px;
-  line-height: initial;
-}
-
-.dropzone {
-  border-style: dashed;
-}
-
-
-.error {
-  font-family: MerriweatherRegular;
-  font-size: 30px;
-  line-height: initial;
-  color: blue;
+header {
   text-align: center;
+  margin-bottom: 24px;
 }
 
-#classTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
+.logo {
+  width: 64px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.12));
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0 0 8px 0;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1.08em;
+  margin-bottom: 0;
+}
+
+.note {
+  background: #e0e7ff;
+  color: #2563eb;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 12px 0 0 0;
+  font-size: 1em;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.07);
+}
+
+.celeb-list {
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.upload-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
   width: 100%;
 }
 
-#classTable td, #classTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+.drop-area {
+  background: #f1f5f9;
+  border: 2px dashed #2563eb;
+  border-radius: 10px;
+  padding: 24px 12px;
+  text-align: center;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s, border-color 0.2s;
+  width: 220px;
 }
 
-#classTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+.drop-area.dragover {
+  background: #e0e7ff;
+  border-color: #1e40af;
+}
+
+.drop-area input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+button {
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.14);
+}
+
+.preview {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.preview img {
+  max-width: 90%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.09);
+  border: 2px solid #e0e7ff;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 14px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  min-height: 32px;
+  font-size: 1.12em;
+  color: #222;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(37, 99, 235, 0.06);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.98em;
+  color: #888;
+  margin-top: 24px;
+  letter-spacing: 0.1px;
 }

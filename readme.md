@@ -158,3 +158,4 @@ sportsPersonDetection/
 
 - Developed by Arjun
 - Powered by Flask, scikit-learn, OpenCV, and wavelet transforms
+- Tutorial followed from [CODEBASICS](https://www.youtube.com/c/codebasics)
